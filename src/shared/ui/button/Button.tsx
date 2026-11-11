@@ -15,7 +15,7 @@ export const Button = <E extends ElementType = typeof defaultTag>({ as, classNam
 
    console.log({ restProps });
 
-   const defaultClassName = "px-15 py-4 rounded-full text-white text border-2 border-white font-semibold";
+   const defaultClassName = "px-15 py-4 rounded-full text-white text border-2 border-white font-semibold max-lg:px-10";
 
    const className = twMerge(defaultClassName, propsClassName);
 

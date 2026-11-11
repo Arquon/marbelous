@@ -1,22 +1,14 @@
-import { LogoLink } from "@/shared/ui";
-import { NavigationLink } from "./link/Link";
+import { DesktopNavigation } from "./desktop/DesktopNavigation";
+import { MobileNavigation } from "./mobile/MobileNavigation";
 
 interface NavigationProps {}
 
 export const Navigation = ({}: NavigationProps) => {
    return (
-      <header className="h-37.5 display flex items-center justify-center">
-         <nav>
-            <ul className="flex gap-8.5 items-center">
-               <NavigationLink href="/#about">О нас</NavigationLink>
-               <NavigationLink href="/#catalog">Каталог</NavigationLink>
-               <li className="px-4">
-                  <LogoLink className="w-[200px]" />
-               </li>
-               <NavigationLink href="/care">Уход</NavigationLink>
-               <NavigationLink href="/#delivery">Доставка</NavigationLink>
-            </ul>
-         </nav>
+      <header className="max-md:fixed max-md:w-full max-md:h-22 max-md:z-10 max-md:flex max-md:items-center relative">
+         <MobileNavigation />
+
+         <DesktopNavigation />
       </header>
    );
 };

@@ -1,3 +1,4 @@
+import { Arrow } from "./arrow/Arrow";
 import { Background } from "./background/Background";
 import { CatalogBanner } from "./catalog-banner/CatalogBanner";
 import { Navigation } from "./navigation/Navigation";
@@ -10,6 +11,7 @@ export const StartScreen = ({}: StartScreenProps) => {
          <Background />
          <Navigation />
          <CatalogBanner />
+         <Arrow />
       </div>
    );
 };
