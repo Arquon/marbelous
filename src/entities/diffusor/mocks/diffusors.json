@@ -1,0 +1,74 @@
+[
+   {
+      "id": 0,
+      "name": "Цитрусовый микс",
+      "description": "Свежий, солнечный, гармоничный и вдохновляющий",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild3462-3862-4165-b632-343932616161/-/resize/432x444/-/format/webp/_3.png.webp"
+   },
+   {
+      "id": 1,
+      "name": "Дыхание саванны",
+      "description": "Солнечное, энергичное, свободное и вдохновляющее",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild6238-3666-4739-b636-326462613237/-/resize/432x444/-/format/webp/Savanna3.png.webp"
+   },
+   {
+      "id": 2,
+      "name": "Пудровый пион",
+      "description": "Нежный, романтичный, элегантный и утончённый",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild3362-3938-4664-a464-393932376563/-/resize/432x444/-/format/webp/Peony2.png.webp"
+   },
+   {
+      "id": 3,
+      "name": "Бархатный миндаль",
+      "description": "Спокойный, интеллектуальный, благородный и уверенный",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild6537-3638-4730-b930-373565303963/-/resize/432x444/-/format/webp/Almond2.png.webp"
+   },
+   {
+      "id": 4,
+      "name": "Ягодный щербет",
+      "description": "Уют, естественная роскошь, спокойствие и гармония",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild6539-3565-4036-a366-303630623735/-/resize/432x444/-/format/webp/Yagodniy2.png.webp"
+   },
+   {
+      "id": 5,
+      "name": "Фисташковый десерт",
+      "description": "Тёплый, уютный, сладкий и расслабляющий",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild6134-6163-4664-b034-343630646335/-/resize/432x444/-/format/webp/Phistachio.png.webp"
+   },
+   {
+      "id": 6,
+      "name": "Тихое утро",
+      "description": "Чистое, спокойное, элегантное и гармоничное",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild6662-6433-4861-b239-316337663063/-/resize/432x444/-/format/webp/Morning.png.webp"
+   },
+   {
+      "id": 7,
+      "name": "Солёный ветер",
+      "description": "Свежий, свободный, лёгкий и гармоничный",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild6263-6166-4633-a439-666638363035/-/resize/432x444/-/format/webp/SandyWind.png.webp"
+   },
+   {
+      "id": 8,
+      "name": "Зелёный мандарин",
+      "description": "Свежий, энергичный, солнечный и элегантный",
+      "price": 1190,
+      "currency": "RUB",
+      "image": "https://optim.tildacdn.com/tild3238-3532-4734-b961-383834383064/-/resize/432x444/-/format/webp/green.png.webp"
+   }
+]

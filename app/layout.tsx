@@ -6,7 +6,17 @@ const myFont = localFont({
    src: [
       {
          path: "../src/_app/fonts/TILDASANS-VF.ttf",
+         weight: "300",
+         style: "normal",
+      },
+      {
+         path: "../src/_app/fonts/TILDASANS-VF.ttf",
          weight: "400",
+         style: "normal",
+      },
+      {
+         path: "../src/_app/fonts/TILDASANS-VF.ttf",
+         weight: "600",
          style: "normal",
       },
       {
@@ -26,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
    return (
-      <html lang="en" className={`${myFont.variable} h-full antialiased`}>
+      <html lang="en" className={`${myFont.className} h-full antialiased`}>
          <body className="min-h-full flex flex-col">{children}</body>
       </html>
    );

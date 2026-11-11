@@ -1,17 +1,17 @@
-import { Delivery } from "@/pages/landing/ui/Delivery/Delivery";
-import { Diffusors } from "@/pages/landing/ui/Diffusors/Diffusors";
-import { StartScreen } from "@/pages/landing/ui/StartScreen/StartScreen";
-import { ValueStatement } from "@/pages/landing/ui/ValueStatement/ValueStatement";
-import { Footer } from "@/widgets/footer/ui/Footer";
+import { Delivery } from "@/pages/landing";
+import { Diffusors } from "@/pages/landing";
+import { StartScreen } from "@/pages/landing";
+import { ValueStatement } from "@/pages/landing";
+import { Footer } from "@/widgets/footer";
 
 export default function Home() {
    return (
-      <div className="">
+      <main className="flex flex-col">
          <StartScreen />
          <ValueStatement />
          <Diffusors />
          <Delivery />
          <Footer />
-      </div>
+      </main>
    );
 }
