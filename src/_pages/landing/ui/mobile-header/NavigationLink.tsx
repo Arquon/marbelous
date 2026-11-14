@@ -1,6 +1,6 @@
 "use client";
 
-import { useNavigationLink } from "@/widgets/navigation/model/useNavigationLink";
+import { useNavigationLink } from "@/shared/lib";
 import Link from "next/link";
 import type { MouseEvent, ReactNode } from "react";
 

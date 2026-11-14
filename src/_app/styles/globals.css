@@ -4,8 +4,9 @@
    --color-background: #ffffff;
    --color-white: #ffffff;
    --color-black: #000000;
-   --color-grey: #ebebeb;
+   --color-light: #ebebeb;
    --color-dark: #111111;
+   --color-grey: #4b4b4b;
 }
 
 html {

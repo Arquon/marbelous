@@ -1,6 +1,6 @@
 "use client";
 
-import { useNavigationLink } from "@/widgets/navigation";
+import { useNavigationLink } from "@/shared/lib";
 import Link from "next/link";
 import type { ReactNode } from "react";
 

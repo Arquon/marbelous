@@ -4,7 +4,7 @@ interface ValueStatementProps {}
 
 export const ValueStatement = ({}: ValueStatementProps) => {
    return (
-      <section className="pt-45 pb-64 bg-grey max-xl:pt-38 max-xl:pb-54 max-md:pt-24 max-md:pb-36 max-md:scroll-mt-22" id="about">
+      <section className="pt-45 pb-64 bg-light max-xl:pt-38 max-xl:pb-54 max-md:pt-24 max-md:pb-36 max-md:scroll-mt-22" id="about">
          <Container className="max-w-[60rem] max-xl:max-w-[50rem] max-sm:max-w-[30rem]">
             <p className="text-center text-block text-3xl font-light leading-[1.45] max-xl:text-[1.63rem] max-sm:text-xl">
                Ароматы Marbelous становятся частью особенной атмосферы дома. <br />

@@ -16,6 +16,11 @@ const myFont = localFont({
       },
       {
          path: "../src/_app/fonts/TILDASANS-VF.ttf",
+         weight: "500",
+         style: "normal",
+      },
+      {
+         path: "../src/_app/fonts/TILDASANS-VF.ttf",
          weight: "600",
          style: "normal",
       },

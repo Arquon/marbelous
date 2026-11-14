@@ -3,11 +3,11 @@
 import { usePathname, useRouter } from "next/navigation";
 import type { MouseEvent } from "react";
 
-interface useNavigationLinkQueryParams {
+interface UseNavigationLinkQueryParams {
    href: string;
 }
 
-export function useNavigationLink({ href }: useNavigationLinkQueryParams) {
+export function useNavigationLink({ href }: UseNavigationLinkQueryParams) {
    const pathName = usePathname();
    const router = useRouter();
 

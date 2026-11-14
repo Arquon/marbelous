@@ -7,11 +7,11 @@ interface StartScreenProps {}
 
 export const StartScreen = ({}: StartScreenProps) => {
    return (
-      <div className="h-screen relative">
+      <section className="h-screen relative">
          <Background />
          <Navigation />
          <CatalogBanner />
          <Arrow />
-      </div>
+      </section>
    );
 };

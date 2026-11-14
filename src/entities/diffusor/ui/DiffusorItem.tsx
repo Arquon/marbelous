@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { DiffusorPreview } from "../model/type";
+import Link from "next/link";
 
 interface DiffusorItemProps {
    diffusor: DiffusorPreview;
@@ -7,10 +8,10 @@ interface DiffusorItemProps {
 }
 
 export const DiffusorItem = ({ diffusor, sizes = "(max-width: 640px) 100vw, (max-width: 1024) 50vw, 33vw" }: DiffusorItemProps) => {
-   const { name, description, price, image } = diffusor;
+   const { name, description, price, image, id } = diffusor;
 
    return (
-      <div className="flex flex-col text-center">
+      <Link className="flex flex-col text-center" href={`/diffusors/${id}`}>
          <div className="w-full aspect-[360/370] relative mb-5">
             <Image src={image} alt={name} fill className="object-cover" sizes={sizes} />
          </div>
@@ -21,6 +22,6 @@ export const DiffusorItem = ({ diffusor, sizes = "(max-width: 640px) 100vw, (max
          <span>
             {price} <span>р.</span>
          </span>
-      </div>
+      </Link>
    );
 };
