@@ -39,7 +39,7 @@ export const DiffusorSwiper = ({ images }: DiffusorSwiperProps) => {
          >
             {images.map((img) => (
                <SwiperSlide className="relative w-full" key={img}>
-                  <Image src={img} fill sizes="760px" className="object-cover" alt="Diffusor" loading="eager" />
+                  <Image src={img} fill sizes="(max-width: 1024px) 100vw, 760px" className="object-cover" alt="Diffusor" loading="eager" />
                </SwiperSlide>
             ))}
 

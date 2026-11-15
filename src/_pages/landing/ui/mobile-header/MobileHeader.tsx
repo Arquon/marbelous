@@ -2,7 +2,7 @@
 
 import { BurgerMenu, LogoLink } from "@/shared/ui";
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavigationLink } from "./NavigationLink";
 
 interface NavigationProps {}
@@ -18,6 +18,13 @@ export const MobileHeader = ({}: NavigationProps) => {
       isOpen && "translate-y-0",
       !isOpen && "-translate-y-full",
    );
+
+   useEffect(() => {
+      return () => {
+         setIsOpen(false);
+      };
+   }, []);
+
    return (
       <header className="fixed flex w-full h-20 z-10 md:hidden">
          <nav className="w-full h-full">

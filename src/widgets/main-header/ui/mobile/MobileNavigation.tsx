@@ -1,7 +1,7 @@
 "use client";
 
 import { BurgerMenu, LogoLink } from "@/shared/ui";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavigationLink } from "../NavigationLink";
 import clsx from "clsx";
 
@@ -17,6 +17,12 @@ export const MobileNavigation = ({}: MobileNavigationProps) => {
       isOpen && "translate-y-0",
       !isOpen && "-translate-y-full",
    );
+
+   useEffect(() => {
+      return () => {
+         setIsOpen(false);
+      };
+   }, []);
 
    return (
       <nav className="w-full h-full">
