@@ -18,7 +18,7 @@ export const Arrow = ({}: ArrowProps) => {
          className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:opacity-75 transition-opacity duration-100"
          onClick={onClick}
       >
-         <ArrowIcon />
+         <ArrowIcon className="w-10" />
       </div>
    );
 };

@@ -11,7 +11,7 @@ export const Background = ({}: BackgroundProps) => {
       <div className="absolute inset-0 -z-10 pointer-events-none [clip-path:inset(0)]">
          <div className="fixed inset-0">
             <BackgroundAppear>
-               <Image src={CareImage} alt="care" className="object-cover" fill sizes="100vw" placeholder="blur" />
+               <Image src={CareImage} alt="care" className="object-cover" fill sizes="100vw" placeholder="blur" loading="eager" />
                <div className="absolute inset-0 bg-black opacity-40" />
             </BackgroundAppear>
          </div>

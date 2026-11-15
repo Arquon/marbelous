@@ -7,16 +7,16 @@ export interface DiffusorPreview {
    image: string;
 }
 
-enum DiffusorSize {
-   SMALL = "100мл",
-   MEDIUM = "200мл",
+interface BuyoutOption {
+   size: string;
+   price: number;
 }
+
 export interface DiffusorDetailed {
    id: number;
    name: string;
    description: string[];
-   price: number;
+   buyoutOptions: BuyoutOption[];
    currency: string;
-   size: DiffusorSize;
    images: string[];
 }

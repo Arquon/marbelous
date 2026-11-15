@@ -6,7 +6,7 @@ interface HeaderProps {}
 export const Header = ({}: HeaderProps) => {
    return (
       <header className="pt-17.5 relative">
-         <div className="fixed top-0 h-17.5 w-full z-1">
+         <div className="fixed top-0 h-17.5 w-full z-2">
             <div className="max-md:hidden w-full h-full">
                <DesktopNavigation />
             </div>
