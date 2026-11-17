@@ -37,11 +37,15 @@ export const DiffusorInformation = ({ diffusor }: DiffusorInformationProps) => {
          />
 
          <div className="flex flex-col gap-5">
-            {diffusor.description.map((text, index) => (
-               <p className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm" key={index}>
-                  {text}
-               </p>
-            ))}
+            <p className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm">{diffusor.description}</p>
+            <div className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm">
+               <p>Ароматический профиль:</p>
+               <p>{diffusor.aromaProfile}</p>
+            </div>
+            <div className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm">
+               <p>Настроение аромата:</p>
+               <p>{diffusor.aromaMood}</p>
+            </div>
          </div>
       </div>
    );

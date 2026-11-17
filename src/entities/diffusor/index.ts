@@ -1,3 +1,3 @@
-export { diffusorService } from "./api/diffusor.service";
+export { diffusorService, allDiffusorsTag, detailedDiffusorTags } from "./api/diffusor.service";
 
 export { DiffusorItem } from "./ui/DiffusorItem";

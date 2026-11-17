@@ -18,3 +18,7 @@ export function fluidClamp({ maxRes, maxValue, minRes, minValue, rootFontSize = 
 
    return `clamp(${minRem}rem, ${intersectionRem}rem + ${slopeVw}vw, ${maxRem}rem)`;
 }
+
+export function delay(ms: number): Promise<void> {
+   return new Promise((resolve, reject) => setTimeout(resolve, ms));
+}

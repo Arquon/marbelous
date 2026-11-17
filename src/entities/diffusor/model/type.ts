@@ -3,7 +3,6 @@ export interface DiffusorPreview {
    name: string;
    description: string;
    price: number;
-   currency: string;
    image: string;
 }
 
@@ -15,8 +14,9 @@ interface BuyoutOption {
 export interface DiffusorDetailed {
    id: number;
    name: string;
-   description: string[];
+   description: string;
+   aromaProfile: string;
+   aromaMood: string;
    buyoutOptions: BuyoutOption[];
-   currency: string;
    images: string[];
 }
