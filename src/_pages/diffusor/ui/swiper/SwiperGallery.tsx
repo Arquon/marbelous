@@ -25,7 +25,7 @@ export const SwiperGallery = ({ images, swiperRef }: SwiperGalleryProps) => {
                key={image}
                onClick={() => onSlideSelect(image)}
             >
-               <Image src={image} alt="Diffusor" fill sizes="60px" className="object-cover" />
+               <Image src={image} alt="Diffusor" fill sizes="100px" className="object-cover" loading="eager" />
             </div>
          ))}
       </div>

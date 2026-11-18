@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
    },
    images: {
       remotePatterns: [new URL("https://optim.tildacdn.com/**")],
+      qualities: [100, 75],
    },
 };
 

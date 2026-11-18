@@ -30,7 +30,10 @@ export const BackgroundAppear = ({ children }: BackgroundAppearProps) => {
 
       observer.observe(element);
 
-      return () => observer.disconnect();
+      return () => {
+         element.style.opacity = "100";
+         observer.disconnect();
+      };
    }, []);
 
    return (

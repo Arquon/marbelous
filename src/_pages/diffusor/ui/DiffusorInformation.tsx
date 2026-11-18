@@ -24,7 +24,7 @@ export const DiffusorInformation = ({ diffusor }: DiffusorInformationProps) => {
    return (
       <div>
          <h3 className="text-2xl font-semibold mb-4.5">{diffusor.name}</h3>
-         <p className="text-xl font-semibold mb-3">{formattedPrice} р.</p>
+         <p className="text-xl font-semibold mb-2.5">{formattedPrice} р.</p>
 
          <Select
             label="Объем"
@@ -37,12 +37,12 @@ export const DiffusorInformation = ({ diffusor }: DiffusorInformationProps) => {
          />
 
          <div className="flex flex-col gap-5">
-            <p className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm">{diffusor.description}</p>
-            <div className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm">
+            <p className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm leading-[1.55]">{diffusor.description}</p>
+            <div className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm leading-[1.55]">
                <p>Ароматический профиль:</p>
                <p>{diffusor.aromaProfile}</p>
             </div>
-            <div className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm">
+            <div className="text-sm font-light max-lg:text-lg max-md:text-base max-sm:text-sm leading-[1.55]">
                <p>Настроение аромата:</p>
                <p>{diffusor.aromaMood}</p>
             </div>

@@ -21,9 +21,14 @@ export const Select = <T extends number | string>({ options, label, value, onCha
    };
 
    return (
-      <label>
-         <p className="text-sm font-light">{label}</p>
-         <select name="" id="" {...restProps} value={value} onChange={onChange}>
+      <label className="block mb-6">
+         <p className="text-sm font-light mb-1">{label}</p>
+         <select
+            className="bg-light font-light pl-2.5 pr-7.5 py-1 text-sm w-37.5 border-1 border-border rounded-sm"
+            {...restProps}
+            value={value}
+            onChange={onChange}
+         >
             {options.map((option) => (
                <option key={option.id} value={option.id}>
                   {option.label}

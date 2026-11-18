@@ -47,7 +47,7 @@ export const DiffusorSwiper = ({ images }: DiffusorSwiperProps) => {
             <SwiperNavigation direction="next" setElement={setNextEl} />
          </Swiper>
 
-         <SwiperGallery images={images} swiperRef={swiperRef} />
+         {images.length > 1 && <SwiperGallery images={images} swiperRef={swiperRef} />}
       </div>
    );
 };
