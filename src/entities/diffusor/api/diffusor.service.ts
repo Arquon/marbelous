@@ -14,6 +14,7 @@ export const diffusorService = {
       const { data, error } = await supabase
          .from("diffusors")
          .select("id, name, description:preview_description, price:buyout_options->0->price, image:preview_image")
+         .order("id")
          .overrideTypes<Array<{ price: number }>>();
 
       if (error) {
