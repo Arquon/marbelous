@@ -13,9 +13,9 @@ export const MobileNavigation = ({}: MobileNavigationProps) => {
    const toggleMenu = () => setIsOpen((prev) => !prev);
 
    const menuClassName = clsx(
-      "absolute top-full left-0 w-full transition-transform origin-top duration-100 flex flex-col items-center bg-black p-5 gap-3 -z-1",
-      isOpen && "translate-y-0",
-      !isOpen && "-translate-y-full",
+      "absolute top-full left-0 w-full transition-all origin-top duration-300 flex flex-col items-center bg-black p-5 gap-3 -z-1",
+      isOpen && "translate-y-0 opacity-100",
+      !isOpen && "-translate-y-full opacity-0",
    );
 
    useEffect(() => {

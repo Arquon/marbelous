@@ -9,7 +9,7 @@ export const Socials = ({}: SocialsProps) => {
          <Link href="mailto:marbelous.store@yandex.ru">
             <MailIcon width={48} height={48} />
          </Link>
-         <Link href="https://t.me/marbelouss">
+         <Link href="https://t.me/marbelouss" target="_blank">
             <TelegramIcon width={48} height={48} />
          </Link>
       </div>
