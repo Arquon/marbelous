@@ -26,6 +26,7 @@ const nextConfig: NextConfig = {
       remotePatterns: [new URL("https://optim.tildacdn.com/**")],
       qualities: [100, 75],
    },
+   output: "standalone",
 };
 
 export default nextConfig;

@@ -1,0 +1,14 @@
+services:
+   web:
+      container_name: marbelous:latest
+      build:
+         context: .
+         dockerfile: Dockerfile
+         secrets:
+            - build_env
+      ports:
+         - "8080:8080"
+
+secrets:
+   build_env:
+      file: .env
