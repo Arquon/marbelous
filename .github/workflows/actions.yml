@@ -36,3 +36,19 @@ jobs:
                  registry.yandexcloud.net/${{secrets.YC_REGISTRY_ID}}/marbelous:${{ github.sha }}
               secret-envs: |
                  build_env=BUILD_ENV_DATA
+         - name: Trigger Timeweb App Redeploy
+           env:
+              APP_ID: ${{ secrets.TIMEWEB_APP_ID }}
+              TOKEN: ${{ secrets.TIMEWEB_TOKEN }}
+              REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+           run: |
+              curl -f -X PATCH "https://api.timeweb.cloud/api/v1/apps/${APP_ID}" \
+                 -H "Content-Type: application/json" \
+                 -H "Authorization: Bearer ${TOKEN}" \
+                 -d '{
+                 "envs": {
+                    "REVALIDATE_SECRET": "'"${REVALIDATE_SECRET}"'"
+                 },
+                 "docker_image": "registry.yandexcloud.net/cn1krhiuq2hcasf486rr/marbelous",
+                 "docker_image_tag": "latest"
+                 }'
