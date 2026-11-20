@@ -1,5 +1,5 @@
 import { cacheTag } from "next/cache";
-import type { DiffusorDetailed } from "../model/type";
+import type { DiffusorDetailed, DiffusorPreview } from "../model/type";
 import { createSupabaseClient } from "@/shared/api/client";
 
 export const allDiffusorsTag = "diffusors";
@@ -15,7 +15,7 @@ export const diffusorService = {
          .from("diffusors")
          .select("id, name, description:preview_description, price:buyout_options->0->price, image:preview_image")
          .order("id")
-         .overrideTypes<Array<{ price: number }>>();
+         .overrideTypes<Array<{ price: number; image: DiffusorPreview["image"] }>>();
 
       if (error) {
          throw error;
@@ -33,7 +33,7 @@ export const diffusorService = {
          .select("id, name, description, aromaProfile:aroma_profile, aromaMood:aroma_mood, buyoutOptions:buyout_options, images")
          .eq("id", id)
          .maybeSingle()
-         .overrideTypes<{ buyoutOptions: DiffusorDetailed["buyoutOptions"]; images: string[] }>();
+         .overrideTypes<{ buyoutOptions: DiffusorDetailed["buyoutOptions"]; images: DiffusorDetailed["images"] }>();
 
       if (error) {
          throw error;

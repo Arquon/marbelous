@@ -25,7 +25,7 @@ export type Database = {
           images: Json
           name: string
           preview_description: string
-          preview_image: string
+          preview_image: Json | null
         }
         Insert: {
           aroma_mood: string
@@ -37,7 +37,7 @@ export type Database = {
           images: Json
           name: string
           preview_description: string
-          preview_image?: string
+          preview_image?: Json | null
         }
         Update: {
           aroma_mood?: string
@@ -49,7 +49,7 @@ export type Database = {
           images?: Json
           name?: string
           preview_description?: string
-          preview_image?: string
+          preview_image?: Json | null
         }
         Relationships: []
       }

@@ -1,16 +1,17 @@
+import type { ImageWithBlurDataURL } from "@/shared/lib";
 import Image from "next/image";
 import type { RefObject } from "react";
 import type Swiper from "swiper";
 
 interface SwiperGalleryProps {
-   images: string[];
+   images: ImageWithBlurDataURL[];
    swiperRef: RefObject<Swiper | null>;
 }
 
 export const SwiperGallery = ({ images, swiperRef }: SwiperGalleryProps) => {
    const onSlideSelect = (img: string) => {
       if (!swiperRef.current) return;
-      const index = images.findIndex((image) => image === img);
+      const index = images.findIndex((imageObj) => imageObj.src === img);
 
       if (index === -1) return;
 
@@ -22,10 +23,19 @@ export const SwiperGallery = ({ images, swiperRef }: SwiperGalleryProps) => {
          {images.map((image) => (
             <div
                className="w-15 h-15 relative cursor-pointer transition-opacity duration-100 hover:opacity-70"
-               key={image}
-               onClick={() => onSlideSelect(image)}
+               key={image.src}
+               onClick={() => onSlideSelect(image.src)}
             >
-               <Image src={image} alt="Diffusor" fill sizes="100px" className="object-cover" loading="eager" />
+               <Image
+                  src={image.src}
+                  blurDataURL={image.blurDataURL}
+                  placeholder="blur"
+                  alt="Diffusor"
+                  fill
+                  sizes="100px"
+                  className="object-cover"
+                  loading="eager"
+               />
             </div>
          ))}
       </div>

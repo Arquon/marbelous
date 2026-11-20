@@ -4,3 +4,8 @@ import type { ComponentProps, ElementType } from "react";
 export type ObjectType = Record<PropertyKey, any>;
 
 export type CustomComponentProps<E extends ElementType, OwnProps extends ObjectType> = Omit<ComponentProps<E>, keyof OwnProps> & OwnProps;
+
+export type ImageWithBlurDataURL = {
+   src: string;
+   blurDataURL?: string;
+};

@@ -1,9 +1,11 @@
+import type { ImageWithBlurDataURL } from "@/shared/lib";
+
 export interface DiffusorPreview {
    id: number;
    name: string;
    description: string;
    price: number;
-   image: string;
+   image: ImageWithBlurDataURL;
 }
 
 interface BuyoutOption {
@@ -18,5 +20,5 @@ export interface DiffusorDetailed {
    aromaProfile: string;
    aromaMood: string;
    buyoutOptions: BuyoutOption[];
-   images: string[];
+   images: ImageWithBlurDataURL[];
 }

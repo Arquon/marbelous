@@ -12,9 +12,10 @@ import type SwiperInstance from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import type { ImageWithBlurDataURL } from "@/shared/lib";
 
 interface DiffusorSwiperProps {
-   images: string[];
+   images: ImageWithBlurDataURL[];
 }
 
 export const DiffusorSwiper = ({ images }: DiffusorSwiperProps) => {
@@ -38,8 +39,18 @@ export const DiffusorSwiper = ({ images }: DiffusorSwiperProps) => {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
          >
             {images.map((img) => (
-               <SwiperSlide className="relative w-full" key={img}>
-                  <Image src={img} fill sizes="(max-width: 1024px) 100vw, 760px" className="object-cover" alt="Diffusor" loading="eager" />
+               <SwiperSlide className="w-full" key={img.src}>
+                  <Image
+                     src={img.src}
+                     blurDataURL={img.blurDataURL}
+                     placeholder="blur"
+                     sizes="(max-width: 1024px) 100vw, 760px"
+                     className="w-full h-full object-cover"
+                     alt="Diffusor"
+                     loading="eager"
+                     width={800}
+                     height={600}
+                  />
                </SwiperSlide>
             ))}
 

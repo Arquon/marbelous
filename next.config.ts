@@ -23,7 +23,11 @@ const nextConfig: NextConfig = {
       },
    },
    images: {
-      remotePatterns: [new URL("https://optim.tildacdn.com/**")],
+      remotePatterns: [
+         // new URL("https://optim.tildacdn.com/**"),
+         new URL("https://optim.tildacdn.com/**"),
+         new URL(process.env.IMAGE_BUCKET + "/**"),
+      ],
       qualities: [100, 75],
    },
    output: "standalone",
